@@ -1,0 +1,32 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" >
+    <xs:element name="users" type ="users"/>
+
+    <xs:complexType name="users">
+        <xs:sequence>
+            <xs:element name="user" type="user" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="user">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string" />
+            <xs:element name="orders" type="orders" />
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:string" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="orders">
+        <xs:sequence>
+            <xs:element name="order" type="order" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="order">
+        <xs:sequence>
+            <xs:element name="car_name" type="xs:string"/>
+            <xs:element name="car_price" type="xs:double"/>
+            <xs:element name="buy_date" type="xs:date"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:string"  use="required"/>
+    </xs:complexType>
+</xs:schema>

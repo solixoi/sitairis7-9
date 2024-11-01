@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<users xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="validator.xsd">
+    <user id="1">
+        <name>dsadasd</name>
+        <orders>
+            <order id="1">
+                <car_name>Add</car_name>
+                <car_price>123</car_price>
+                <buy_date>2000-10-10</buy_date>
+            </order>
+        </orders>
+    </user>
+</users>

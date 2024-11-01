@@ -1,0 +1,26 @@
+<project name="ci-cd-demo" default="deploy" basedir=".">
+    <property name="src.dir" value="src"/>
+    <property name="build.dir" value="build"/>
+    <property name="dist.dir" value="dist"/>
+
+    <target name="clean">
+        <delete dir="${build.dir}"/>
+        <delete dir="${dist.dir}"/>
+    </target>
+
+    <target name="compile" depends="clean">
+        <mkdir dir="${build.dir}"/>
+        <javac srcdir="${src.dir}" destdir="${build.dir}"/>
+    </target>
+
+    <target name="package" depends="compile">
+        <mkdir dir="${dist.dir}"/>
+        <jar destfile="${dist.dir}/9lab_app.jar" basedir="${build.dir}" manifest="manifest/manifest.txt"/>
+    </target>
+
+    <target name="deploy" depends="package">
+        <echo message="Доставка приложения завершена. Файл: ${dist.dir}/9lab_app.jar"/>
+        <copy file="${dist.dir}/9lab_app.jar" todir="D:/sitairis/Lab7/deployed/"/>
+        <echo message="Файл скопирован в папку развертывания."/>
+    </target>
+</project>

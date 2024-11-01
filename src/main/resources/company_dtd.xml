@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE company SYSTEM "validator.dtd">
+<company>
+    <company_name>Example Company</company_name>
+    <work_hours>
+        <open>09:00</open>
+        <close>18:00</close>
+    </work_hours>
+    <products>
+        <product id="1">
+            <car_name>sdsad</car_name>
+            <car_body>asdsad</car_body>
+            <price>222.22</price>
+            <discount>22</discount>
+        </product>
+        <product id="2">
+            <car_name>BMV</car_name>
+            <car_body>universal</car_body>
+            <price>1232.2</price>
+            <discount>40.21</discount>
+        </product>
+        <product id="3">
+            <car_name>Audi</car_name>
+            <car_body>Coupe</car_body>
+            <price>5000.2</price>
+            <discount>20.12</discount>
+        </product>
+    </products>
+</company>

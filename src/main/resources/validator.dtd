@@ -1,0 +1,12 @@
+<!ELEMENT company (company_name,work_hours,products)>
+<!ELEMENT company_name (#PCDATA)>
+<!ELEMENT work_hours (open,close)>
+<!ELEMENT open (#PCDATA)>
+<!ELEMENT close (#PCDATA)>
+<!ELEMENT products (product*)>
+<!ELEMENT product (car_name,car_body,price,discount)>
+<!ELEMENT car_name (#PCDATA)>
+<!ELEMENT car_body (#PCDATA)>
+<!ELEMENT price (#PCDATA)>
+<!ELEMENT discount (#PCDATA)>
+<!ATTLIST product id CDATA #REQUIRED>
